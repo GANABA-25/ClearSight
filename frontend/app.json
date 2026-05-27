@@ -1,0 +1,92 @@
+{
+  "expo": {
+    "name": "clearSight",
+    "slug": "clearSight",
+    "owner": "ganaba",
+    "scheme": ["clearsight"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "extra": {
+      "webClientId": "376583342053-odgp6eovqial2hbbr43ijl9l90jo8jlg.apps.googleusercontent.com",
+      "iosClientId": "376583342053-4nfa1c53v9ehvm3q5lgidchk12lap0kp.apps.googleusercontent.com",
+      "androidClientId": "376583342053-d1kh9q0nr0d7it20ttiqq2hoevcmem6j.apps.googleusercontent.com",
+      "SIGN_UP_URL": "http://192.168.8.113:8090/user/signup",
+      "SIGN_IN_URL": "http://192.168.8.113:8090/user/login",
+      "RESET_PASSWORD_EMAIL_VERIFICATION_URL": "http://192.168.8.113:8090/user/resetPasswordEmailVerification",
+      "RESET_PASSWORD_OTP_VERIFICATION_URL": "http://192.168.8.113:8090/user/verifyOtp",
+      "NEW_PASSWORD_URL": "http://192.168.8.113:8090/user/resetpassword",
+      "ONBOARDING_URL": "http://192.168.8.113:8090/user/onBoarding",
+      "UPDATE_PROFILE_URL": "http://192.168.8.113:8090/user/updateProfile",
+      "SCAN_IMAGE_URL": "http://192.168.8.113:8090/checkCataract/scanImage",
+      "SCAN_HISTORY_URL": "http://192.168.8.113:8090/checkCataract/scanHistory",
+      "GET_SCAN_HISTORY_URL": "http://192.168.8.113:8090/checkCataract/getScanHistory",
+      "PLACES_API_KEY": "AIzaSyCll9CMH8w9eYA3GSgrT8WuVkjmYu2vOmQ",
+      "eas": {
+        "projectId": "044cdf96-f149-4b90-88e4-7f3e105f9267"
+      }
+    },
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "buildNumber": "1.0.0",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ganaba.clearSight",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Clear Sight We need your location to show nearby clinics."
+      }
+    },
+    "android": {
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCll9CMH8w9eYA3GSgrT8WuVkjmYu2vOmQ"
+        }
+      },
+      "package": "com.ganaba.clearSight",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(ClearSight) to access your camera",
+          "microphonePermission": "Allow $(ClearSight) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(Clear Sight) to use your location."
+        }
+      ],
+      "expo-web-browser",
+      "expo-font"
+    ]
+  }
+}
